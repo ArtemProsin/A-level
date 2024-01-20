@@ -1,3 +1,4 @@
+package ua.Prosin.HW2;
 
 public class Home2task2 {
     public static void main(String[] args) {
