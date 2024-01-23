@@ -1,6 +1,6 @@
-package ua.Prosin.HW3;
+package ua.prosin.hw3;
 
-public class task2 {
+public class Task2 {
     public static void main(String[] args) {
         String originalString = "A man a plan a canal Panama";
         String stringWithoutSpace = originalString.replaceAll("\\s", "");

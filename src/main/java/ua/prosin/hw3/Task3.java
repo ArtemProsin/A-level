@@ -1,8 +1,8 @@
-package ua.Prosin.HW3;
+package ua.prosin.hw3;
 
 import java.util.Scanner;
 
-public class task3 {
+public class Task3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("whrite here");
@@ -14,6 +14,12 @@ public class task3 {
 
     public static int countWords(String str) {
         String[] words = str.split("\\s+");
-        return words.length;
+        int nonEmptyWordCount = 0;
+        for (String word : words){
+            if (!word.isEmpty()){
+               nonEmptyWordCount++;
+            }
+        }
+        return nonEmptyWordCount;
     }
 }

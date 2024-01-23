@@ -1,6 +1,6 @@
-package ua.Prosin.HW2;
+package ua.prosin.hw2;
 
-public class task3 {
+public class Task3 {
     public static void main(String[] args) {
         int number = 4567;
         if (number % 2 == 0) {

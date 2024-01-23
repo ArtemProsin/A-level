@@ -1,4 +1,4 @@
-package ua.Prosin.HW4;
+package ua.prosin.hw4;
 
 import java.util.Random;
 

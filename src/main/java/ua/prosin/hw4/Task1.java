@@ -1,4 +1,4 @@
-package ua.Prosin.HW4;
+package ua.prosin.hw4;
 
 import java.util.Random;
 
@@ -30,8 +30,8 @@ public class Task1 {
     }
 
     public static double calculateGeometricMean(int[] array) {
-        int product = 1;
-        for(int value : array){
+        double product = 1;
+        for(double value : array){
             product *= value;
         }
         return Math.pow(product, 1.0 / array.length);

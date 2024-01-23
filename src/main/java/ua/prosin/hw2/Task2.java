@@ -1,6 +1,6 @@
-package ua.Prosin.HW2;
+package ua.prosin.hw2;
 
-public class Home2task2 {
+public class Task2 {
     public static void main(String[] args) {
         double[] pointA = {1, 5};
         double[] pointB = {3, 5};

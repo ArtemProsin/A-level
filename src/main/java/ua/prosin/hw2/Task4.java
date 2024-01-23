@@ -1,6 +1,6 @@
-package ua.Prosin.HW2;
+package ua.prosin.hw2;
 
-public class task4 {
+public class Task4 {
     public static void main(String[] args) {
         double num1 = -5;
         double num2 = 7;

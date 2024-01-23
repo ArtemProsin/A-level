@@ -1,11 +1,16 @@
-package ua.Prosin.HW4;
+package ua.prosin.hw4;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Task3 {
     public static void main(String[] args) {
         int[] array = generateRandomArray(2000, 1, 10);
+        int[] originalArray = Arrays.copyOf(array, array.length);
         replaceEvenWithZeros(array);
+        System.out.println("sours array");
+        printArray(originalArray);
         System.out.println("even with zeros");
         printArray(array);
     }
