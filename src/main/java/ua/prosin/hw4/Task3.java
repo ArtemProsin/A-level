@@ -4,15 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Task3 {
+public class Task3 {  
     public static void main(String[] args) {
         int[] array = generateRandomArray(2000, 1, 10);
-        int[] originalArray = Arrays.copyOf(array, array.length);
         replaceEvenWithZeros(array);
-        System.out.println("sours array");
-        printArray(originalArray);
-        System.out.println("even with zeros");
-        printArray(array);
     }
 
     public static int[] generateRandomArray(int size, int min, int max) {
@@ -25,11 +20,17 @@ public class Task3 {
     }
 
     public static void replaceEvenWithZeros(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] % 2 == 0) {
-                array[i] = 0;
+        int[] originalArray = Arrays.copyOf(array, array.length);
+        int[] modifiedArray = Arrays.copyOf(array, array.length);
+        for (int i = 0; i < modifiedArray.length; i++) {
+            if (modifiedArray[i] % 2 == 0) {
+                modifiedArray[i] = 0;
             }
         }
+        System.out.println("original Array");
+        printArray(originalArray);
+        System.out.println("even with zeros");
+        printArray(modifiedArray);
     }
     public static void printArray(int[] array) {
         for (int value : array) {
