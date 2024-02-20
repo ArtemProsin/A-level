@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Utils {
-    public  int getSum(List<Integer> numbers){
+    public static int getSum(List<Integer> numbers){
         int sum = 0;
 
         for (int i = 0; i < numbers.size(); i++) {
@@ -14,7 +14,7 @@ public class Utils {
         return sum;
     }
 
-     public  ArrayList<Integer> getOdd(List<Integer> numbers){
+     public static ArrayList<Integer> getOdd(List<Integer> numbers){
         ArrayList<Integer> result = new ArrayList<>();
          for (int i = 0; i < numbers.size(); i++) {
              if (numbers.get(i) % 2 != 0) {
@@ -24,7 +24,7 @@ public class Utils {
          return result;
      }
 
-     public ArrayList<String> convertToStringList(List<Integer> numbers){
+     public static ArrayList<String> convertToStringList(List<Integer> numbers){
          ArrayList<String> result = new ArrayList<>();
          for (int i = 0; i < numbers.size(); i++) {
              result.add(numbers.get(i).toString());
@@ -33,7 +33,7 @@ public class Utils {
 
      }
 
-     public  ArrayList<String> doubling(List<String> strings){
+     public static ArrayList<String> doubling(List<String> strings){
          ArrayList<String> result = new ArrayList<>();
          for (int i = 0; i < strings.size(); i++) {
              result.add(strings.get(i).repeat(2));
@@ -52,10 +52,9 @@ class UtilsRunner {
         ArrayList<String> strings = new ArrayList<>();
         strings.add("2i");
 
-        Utils utils = new Utils();
-        System.out.println(utils.getSum(numbers));
-        System.out.println(utils.getOdd(numbers));
-        System.out.println(utils.convertToStringList(numbers));
-        System.out.println(utils.doubling(strings));
+        System.out.println(Utils.getSum(numbers));
+        System.out.println(Utils.getOdd(numbers));
+        System.out.println(Utils.convertToStringList(numbers));
+        System.out.println(Utils.doubling(strings));
     }
 }

@@ -1,6 +1,8 @@
 package ua.prosin.hw10;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 class PhoneBook {
@@ -10,17 +12,21 @@ class PhoneBook {
         PHONE_BOOK[0] = "016/161616";
         PHONE_BOOK[1] = "016/161617";
         PHONE_BOOK[2] = "016/161618";
-        System.out.print(findIndexByPhoneNumber("016/161616"));
+        findIndexByPhoneNumber("016/161616");
     }
 
-    public static Optional<Integer> findIndexByPhoneNumber(String phoneNumber) {
+    public static void  findIndexByPhoneNumber(String phoneNumber) {
 
-        int index = Arrays.asList(PHONE_BOOK).indexOf(phoneNumber);
-        System.out.println(index);
-        if (index >= 0) {
-            return Optional.of(index);
+        List<String> strings = Arrays.asList(PHONE_BOOK);
+        Optional<Integer> result = strings.stream()
+                .filter(s -> s.equals(phoneNumber))
+                .findFirst()
+                .map(strings::indexOf);
+
+        if(result.isPresent()){
+            System.out.println(result.get());
         } else {
-            return Optional.empty();
+            System.out.println("Not Found");
         }
     }
 }
